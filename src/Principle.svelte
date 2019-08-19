@@ -94,8 +94,8 @@
     // Refreshing the principle ----------------------------------------------------------
     newPrincipleStore.subscribe(val => {
         if (val) {
-            buildPrinciple();
             newPrincipleStore.set(false);
+            buildPrinciple();
         }
     });
 

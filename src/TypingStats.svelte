@@ -17,7 +17,7 @@
     }
 
     const calcAccuracy = () => {
-        accuracy.set(Math.floor((($keyCount - $totalWrong) / $keyCount) * 1000) / 10);
+        accuracy.set(Math.floor((($keyCount - $totalWrong) / $keyCount) * 1000 ) / 10);
     }
 
     keyCount.subscribe(() => {

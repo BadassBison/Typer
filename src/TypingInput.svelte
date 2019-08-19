@@ -16,7 +16,11 @@
 
 
     newPrincipleStore.subscribe(val => {
-        if (val) document.querySelector("input").value = "";
+        if (val) {
+            let input = document.querySelector("input");
+            input.value = "";
+            input.focus();
+        }
     });
     
     
@@ -52,4 +56,4 @@
 	}
 </style>
 
-<input type="text" on:keypress={keyPress} on:keydown={deleteKey} on:focus={startTime} {disabled} />
+<input type="text" id="input" on:keypress={keyPress} on:keydown={deleteKey} on:focus={startTime} {disabled} />
